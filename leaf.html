@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="200"
+      style="border: 1px solid #d3d3d3"
+    >
+      您的浏览器不支持 HTML5 canvas 标签。
+    </canvas>
+
+    <script>
+      window.onload = function () {
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // 设置圆心位置
+        var centerX = 100; // x轴上的中心点
+        var centerY = 100; // y轴上的中心点
+
+        // 设置半径
+        var radius = 50;
+
+        // 开始路径
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, Math.PI / 2, false);
+        ctx.arc(
+          centerX + 50,
+          centerY + 50,
+          radius,
+          Math.PI,
+          (3 * Math.PI) / 2,
+          false
+        );
+        // 设置填充颜色为绿色
+        ctx.fillStyle = "#8cce7f";
+        // 填充形状
+        ctx.fill();
+
+        ctx.lineTo(centerX, centerY + 50);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "blue";
+        ctx.stroke();
+      };
+    </script>
+  </body>
+</html>
