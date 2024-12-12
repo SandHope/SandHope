@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Pixel Art</title>
+    <style>
+      * {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="myCanvas" width="800" height="491"></canvas>
+    <script type="module">
+      import { drawLeaf } from "./leaf.js";
+      import { drawDune } from "./dune.js";
+
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawDune(ctx);
+        ctx.save();
+
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.translate(530, 50);
+        // //ctx.clearRect(0, 0, 141, 119);
+        drawLeaf(ctx);
+        ctx.restore();
+
+        window.requestAnimationFrame(draw);
+      }
+
+      window.requestAnimationFrame(draw);
+    </script>
+  </body>
+</html>

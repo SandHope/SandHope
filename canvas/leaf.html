@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Pixel Art</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+      * {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="myCanvas" width="800" height="491"></canvas>
+    <script type="module">
+      import { drawLeaf } from "./leaf.js";
+
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        
+        drawLeaf(ctx);
+
+        window.requestAnimationFrame(draw);
+      }
+
+      window.requestAnimationFrame(draw);
+    </script>
+  </body>
+</html>
