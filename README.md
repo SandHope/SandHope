@@ -18,3 +18,6 @@ The inspiration for SandHope comes from nature. In the natural world, each grain
 - **Sand Dune**: Symbolizes the organization formed by numerous participants.
 - **Decaying Wood**: The black parts on the sand dune represent decaying wood in nature, which, although no longer growing, provides nourishment for new life. In the open-source community, this symbolizes inactive or archived repositories that provide valuable resources and experience for new projects, helping newcomers learn and grow.
 
+## Logo animation drawn using canvas
+
+> https://sandhope.com/sandhope/
