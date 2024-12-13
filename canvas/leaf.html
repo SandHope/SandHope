@@ -17,7 +17,7 @@
   <body>
     <canvas id="myCanvas" width="800" height="491"></canvas>
     <script type="module">
-      import { drawLeaf } from "./leaf.js";
+      import { drawLeaf } from "./leaf.full.js";
 
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
@@ -25,7 +25,6 @@
       function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.setTransform(1, 0, 0, 1, 0, 0);
-        
         drawLeaf(ctx);
 
         window.requestAnimationFrame(draw);

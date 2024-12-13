@@ -3,8 +3,8 @@ let direction = 1;
 let bounds = getRandomBounds();
 
 export function getRandomBounds() {
-  const minBound = Math.random() * 5 - 10;
-  const maxBound = Math.random() * 5 + 5;
+  const minBound = Math.random() * 5 - 8;
+  const maxBound = Math.random() * 5 + 3;
   return [minBound, maxBound];
 }
 
